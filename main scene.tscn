@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnbbqga226g37"]
+[gd_scene load_steps=12 format=3 uid="uid://bnbbqga226g37"]
 
 [ext_resource type="Texture2D" uid="uid://ohpk423fq4no" path="res://Background.png" id="1_pg7k5"]
 [ext_resource type="Texture2D" uid="uid://cyysb448n6l0j" path="res://Terrain (16x16).png" id="2_p22tr"]
@@ -761,6 +761,9 @@ physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_58aic")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyo1k"]
+size = Vector2(168.838, 128.095)
+
 [node name="main scene" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -792,9 +795,17 @@ scale = Vector2(2.0325, 2.165)
 texture = ExtResource("3_o4vxw")
 script = ExtResource("4_bco44")
 
-[node name="Player" parent="." instance=ExtResource("4_bh2v0")]
+[node name="Area2D" type="Area2D" parent="farm building"]
 
-[node name="Player2" parent="." instance=ExtResource("5_72ip0")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="farm building/Area2D"]
+position = Vector2(-4.63407, 2.30946)
+shape = SubResource("RectangleShape2D_uyo1k")
+
+[node name="pinkchicken" parent="." instance=ExtResource("4_bh2v0")]
+position = Vector2(103, 40)
+
+[node name="bluechicken" parent="." instance=ExtResource("5_72ip0")]
+position = Vector2(122, 1588)
 
 [node name="moving platform" parent="." instance=ExtResource("6_23hu1")]
 position = Vector2(609, 595)
@@ -858,6 +869,8 @@ scale = Vector2(-1.13444, 0.304171)
 
 [node name="CollisionShape2D" parent="pink surface/pink 4" index="1"]
 position = Vector2(3151.9, -23949.5)
+
+[connection signal="body_entered" from="farm building/Area2D" to="farm building" method="_on_area_2d_body_entered"]
 
 [editable path="pink surface/pink 1"]
 [editable path="pink surface/pink 2"]

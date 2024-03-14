@@ -1,0 +1,93 @@
+[gd_scene load_steps=13 format=3 uid="uid://pwgf45wodgwr"]
+
+[ext_resource type="Script" path="res://pink chicken.gd" id="1_6hopi"]
+[ext_resource type="Texture2D" uid="uid://dsk7k0qrqfl24" path="res://Chicken_Sprite_Sheet (1).png" id="2_i3dkn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhhrw"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r507"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwboh"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qthd"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sfi4"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pambl"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvtdw"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8xfr"]
+atlas = ExtResource("2_i3dkn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_25ppt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhhrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r507")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwboh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qthd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sfi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pambl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvtdw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8xfr")
+}],
+"loop": true,
+"name": &"running",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpnwq"]
+size = Vector2(76.5, 76.0625)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_6hopi")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(154.369, 1580.07)
+scale = Vector2(2.85193, 2.80799)
+sprite_frames = SubResource("SpriteFrames_25ppt")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.397898
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(153.75, 1580.03)
+shape = SubResource("RectangleShape2D_gpnwq")

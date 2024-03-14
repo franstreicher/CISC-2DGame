@@ -1,0 +1,262 @@
+[gd_scene load_steps=15 format=3 uid="uid://ua7y3atnikbv"]
+
+[ext_resource type="Script" path="res://door_and_button.gd" id="1_fm2pj"]
+[ext_resource type="Texture2D" uid="uid://lwyg1aprd2fl" path="res://buttom.png" id="2_affim"]
+[ext_resource type="Texture2D" uid="uid://do5g8je1xjwre" path="res://strange_door_closed_anim_strip_10.png" id="3_53o6a"]
+[ext_resource type="Texture2D" uid="uid://cgpeyeg8dacl" path="res://buttom_pressed.png" id="4_pyx7m"]
+[ext_resource type="Texture2D" uid="uid://bihfl0kou2la0" path="res://strange_door_opening_anim_strip_14.png" id="5_djcqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24i5x"]
+size = Vector2(20, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73ptq"]
+size = Vector2(13, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0o4jm"]
+size = Vector2(18, 47)
+
+[sub_resource type="Animation" id="Animation_0iay1"]
+resource_name = "buttonup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_affim")]
+}
+
+[sub_resource type="Animation" id="Animation_8ioih"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_affim")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_53o6a")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Door/door/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_iowgl"]
+resource_name = "buttondown"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Button:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_pyx7m")]
+}
+
+[sub_resource type="Animation" id="Animation_12d40"]
+resource_name = "doorclosed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_53o6a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door/door/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_bnpxb"]
+resource_name = "dooropen"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_djcqs")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door/door/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wjhne"]
+_data = {
+"RESET": SubResource("Animation_8ioih"),
+"buttondown": SubResource("Animation_iowgl"),
+"buttonup": SubResource("Animation_0iay1"),
+"doorclosed": SubResource("Animation_12d40"),
+"dooropen": SubResource("Animation_bnpxb")
+}
+
+[node name="door and button" type="Node2D"]
+script = ExtResource("1_fm2pj")
+
+[node name="Button" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34, 1)
+scale = Vector2(4.9375, 9.25)
+texture = ExtResource("2_affim")
+metadata/_edit_group_ = true
+
+[node name="button" type="StaticBody2D" parent="Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/button"]
+position = Vector2(0, 0.972973)
+shape = SubResource("RectangleShape2D_24i5x")
+
+[node name="Area2D" type="Area2D" parent="Button"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button/Area2D"]
+position = Vector2(-0.405063, -1.08108)
+shape = SubResource("RectangleShape2D_73ptq")
+
+[node name="Door" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(134.5, 29.5)
+scale = Vector2(5.0625, 3.5625)
+texture = ExtResource("3_53o6a")
+hframes = 10
+metadata/_edit_group_ = true
+
+[node name="door" type="StaticBody2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/door"]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_0o4jm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wjhne")
+}

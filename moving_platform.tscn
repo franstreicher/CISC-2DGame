@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn5hkd2war1vv"]
+
+[ext_resource type="Texture2D" uid="uid://cyysb448n6l0j" path="res://Terrain (16x16).png" id="1_n5nmn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwau6"]
+size = Vector2(124, 10)
+
+[sub_resource type="Animation" id="Animation_utm7r"]
+resource_name = "move loop"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2.08165e-12, 5), Vector2(300, 5), Vector2(2.08165e-12, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_eok5s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.08165e-12, 5), Vector2(240, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_15bji"]
+_data = {
+"RESET": SubResource("Animation_eok5s"),
+"move loop": SubResource("Animation_utm7r")
+}
+
+[node name="Movingplatform" type="Node2D"]
+
+[node name="platform" type="AnimatableBody2D" parent="."]
+position = Vector2(2.08165e-12, 5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="platform"]
+texture_filter = 1
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(2.66667, 3.125)
+texture = ExtResource("1_n5nmn")
+region_enabled = true
+region_rect = Rect2(272, 16, 48, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2(-2.08165e-12, -4)
+shape = SubResource("RectangleShape2D_iwau6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platform"]
+libraries = {
+"": SubResource("AnimationLibrary_15bji")
+}
+autoplay = "move loop"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnbbqga226g37"]
+[gd_scene load_steps=11 format=3 uid="uid://bnbbqga226g37"]
 
 [ext_resource type="Texture2D" uid="uid://ohpk423fq4no" path="res://Background.png" id="1_pg7k5"]
 [ext_resource type="Texture2D" uid="uid://cyysb448n6l0j" path="res://Terrain (16x16).png" id="2_p22tr"]
@@ -867,9 +867,7 @@ scale = Vector2(-1.13444, 0.304171)
 [node name="CollisionShape2D" parent="pink surface/pink 4" index="1"]
 position = Vector2(3151.9, -23949.5)
 
-
 [connection signal="body_entered" from="farm building/Area2D" to="farm building" method="_on_area_2d_body_entered"]
-
 
 [editable path="pink surface/pink 1"]
 [editable path="pink surface/pink 2"]

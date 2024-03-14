@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnbbqga226g37"]
+[gd_scene load_steps=10 format=3 uid="uid://bnbbqga226g37"]
 
 [ext_resource type="Texture2D" uid="uid://ohpk423fq4no" path="res://Background.png" id="1_pg7k5"]
 [ext_resource type="Texture2D" uid="uid://cyysb448n6l0j" path="res://Terrain (16x16).png" id="2_p22tr"]
 [ext_resource type="Texture2D" uid="uid://dquacif8fnmg1" path="res://farm-builing-isolated-element-cute-red-country-house-farm-barn-apple-tree-bush-plant-fence-garden-hand-drawn-cartoon-granary-building-funny-rural-house-png.webp" id="3_o4vxw"]
-[ext_resource type="Script" path="res://farm building.gd" id="4_bco44"]
 [ext_resource type="PackedScene" uid="uid://pwgf45wodgwr" path="res://pink chicken.tscn" id="4_bh2v0"]
 [ext_resource type="PackedScene" uid="uid://ddm2bn0d11c20" path="res://blue chicken.tscn" id="5_72ip0"]
 [ext_resource type="PackedScene" uid="uid://cn5hkd2war1vv" path="res://moving_platform.tscn" id="6_23hu1"]
@@ -776,7 +775,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_pg7k5")
 stretch_mode = 5
-metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -790,7 +788,6 @@ texture_filter = 1
 position = Vector2(199, 196)
 scale = Vector2(2.0325, 2.165)
 texture = ExtResource("3_o4vxw")
-script = ExtResource("4_bco44")
 
 [node name="Player" parent="." instance=ExtResource("4_bh2v0")]
 
@@ -858,6 +855,8 @@ scale = Vector2(-1.13444, 0.304171)
 
 [node name="CollisionShape2D" parent="pink surface/pink 4" index="1"]
 position = Vector2(3151.9, -23949.5)
+
+[node name="Node2D" type="Node2D" parent="."]
 
 [editable path="pink surface/pink 1"]
 [editable path="pink surface/pink 2"]

@@ -7,7 +7,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _on_Area2D_body_entered(Player):
+func _on_Area2D_body_entered(body:
 	if Player.is_in_group("Player"):
 		$Animationplayer.play("buttondown")
 		$Animationplayer.play("dooropen")

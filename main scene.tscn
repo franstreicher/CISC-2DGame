@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://pwgf45wodgwr" path="res://pink chicken.tscn" id="4_bh2v0"]
 [ext_resource type="PackedScene" uid="uid://ddm2bn0d11c20" path="res://blue chicken.tscn" id="5_72ip0"]
 [ext_resource type="PackedScene" uid="uid://cn5hkd2war1vv" path="res://moving_platform.tscn" id="6_23hu1"]
-[ext_resource type="PackedScene" uid="uid://ua7y3atnikbv" path="res://door_and_button.tscn" id="7_fpk7o"]
+[ext_resource type="PackedScene" uid="uid://qidbubq01ww" path="res://pink_surface.tscn" id="8_js6r7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58aic"]
 texture = ExtResource("2_p22tr")
@@ -806,14 +806,58 @@ position = Vector2(653, 288)
 [node name="moving platform4" parent="." instance=ExtResource("6_23hu1")]
 position = Vector2(1700, 258)
 
-[node name="door and button" parent="." instance=ExtResource("7_fpk7o")]
-position = Vector2(933, 935)
+[node name="pink surface" type="Node2D" parent="."]
+position = Vector2(1700, 258)
 
-[node name="Button" parent="door and button" index="0"]
-position = Vector2(1531, 725)
+[node name="pink 1" parent="pink surface" instance=ExtResource("8_js6r7")]
+position = Vector2(-3466, 25312)
+scale = Vector2(0.78889, 0.996535)
 
-[node name="Door" parent="door and button" index="1"]
-position = Vector2(586, 103)
-scale = Vector2(5.0625, 6.82292)
+[node name="Area2D" parent="pink surface/pink 1" index="0"]
+position = Vector2(3152.36, -23948.9)
+scale = Vector2(-1.13444, 0.304171)
 
-[editable path="door and button"]
+[node name="CollisionShape2D" parent="pink surface/pink 1" index="1"]
+position = Vector2(3151.9, -23949.5)
+
+[node name="pink 2" parent="pink surface" instance=ExtResource("8_js6r7")]
+position = Vector2(-3033, 25122)
+scale = Vector2(0.78889, 0.996535)
+
+[node name="Area2D" parent="pink surface/pink 2" index="0"]
+position = Vector2(3152.36, -23948.9)
+scale = Vector2(-1.13444, 0.304171)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="pink surface/pink 2" index="1"]
+position = Vector2(3151.9, -23949.5)
+metadata/_edit_group_ = true
+
+[node name="pink 3" parent="pink surface" instance=ExtResource("8_js6r7")]
+position = Vector2(-2600, 25308)
+scale = Vector2(0.78889, 0.996535)
+
+[node name="Area2D" parent="pink surface/pink 3" index="0"]
+position = Vector2(3152.36, -23948.9)
+scale = Vector2(-1.13444, 0.304171)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="pink surface/pink 3" index="1"]
+position = Vector2(3151.9, -23949.5)
+metadata/_edit_group_ = true
+
+[node name="pink 4" parent="pink surface" instance=ExtResource("8_js6r7")]
+position = Vector2(-2161, 25118)
+scale = Vector2(0.78889, 0.996535)
+
+[node name="Area2D" parent="pink surface/pink 4" index="0"]
+position = Vector2(3152.36, -23948.9)
+scale = Vector2(-1.13444, 0.304171)
+
+[node name="CollisionShape2D" parent="pink surface/pink 4" index="1"]
+position = Vector2(3151.9, -23949.5)
+
+[editable path="pink surface/pink 1"]
+[editable path="pink surface/pink 2"]
+[editable path="pink surface/pink 3"]
+[editable path="pink surface/pink 4"]

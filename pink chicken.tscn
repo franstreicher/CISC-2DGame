@@ -85,7 +85,7 @@ scale = Vector2(2.85193, 2.80799)
 sprite_frames = SubResource("SpriteFrames_25ppt")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.397898
+frame_progress = 0.914353
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

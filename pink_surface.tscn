@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://qidbubq01ww"]
+
+[ext_resource type="Texture2D" uid="uid://143hy83nip4p" path="res://pink.png" id="1_oxhv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0u25"]
+size = Vector2(353.661, 45.1919)
+
+[node name="pink surface" type="CharacterBody2D"]
+position = Vector2(-14185, 572)
+scale = Vector2(-0.0652781, 0.104039)
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(49992.1, 7927.74)
+scale = Vector2(-476.693, 182.01)
+texture = ExtResource("1_oxhv7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(49643, 8244)
+shape = SubResource("RectangleShape2D_v0u25")

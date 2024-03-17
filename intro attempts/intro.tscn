@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciavofncxhfay"]
+[gd_scene load_steps=3 format=3 uid="uid://ciavofncxhfay"]
 
-[ext_resource type="Texture2D" uid="uid://cteacgjxardoc" path="res://intro attempts/Intro Page 1.jpg" id="1_j40g0"]
+[ext_resource type="Texture2D" path="res://intro attempts/Intro Page 1.jpg" id="1_j40g0"]
+[ext_resource type="Script" path="res://intro attempts/intro.gd" id="1_nngj0"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -9,12 +10,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nngj0")
+
+[node name="IntroPage1" type="Sprite2D" parent="."]
+position = Vector2(1452, 898)
+scale = Vector2(2.10694, 2.30161)
+texture = ExtResource("1_j40g0")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 273.0
+offset_right = 342.0
+offset_bottom = 108.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -30,3 +40,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 41
 text = "PLAY"
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]

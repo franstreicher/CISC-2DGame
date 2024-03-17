@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ciavofncxhfay"]
+[gd_scene load_steps=2 format=3 uid="uid://ciavofncxhfay"]
+
+[ext_resource type="Texture2D" uid="uid://cteacgjxardoc" path="res://intro attempts/Intro Page 1.jpg" id="1_j40g0"]
 
 [node name="Intro" type="Control"]
 layout_mode = 3

@@ -792,6 +792,7 @@ texture = ExtResource("3_o4vxw")
 [node name="Player" parent="." instance=ExtResource("4_bh2v0")]
 
 [node name="Player2" parent="." instance=ExtResource("5_72ip0")]
+position = Vector2(318, 1545)
 
 [node name="moving platform" parent="." instance=ExtResource("6_23hu1")]
 position = Vector2(609, 595)

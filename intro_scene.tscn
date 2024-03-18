@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhcqclq1djy3n"]
+
+[ext_resource type="Texture2D" uid="uid://cteacgjxardoc" path="res://Intro Page 1.jpg" id="1_kq7nx"]
+
+[sub_resource type="Theme" id="Theme_v5fjx"]
+
+[node name="intro scene" type="Node2D"]
+
+[node name="IntroPage1" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1476, 894)
+scale = Vector2(2.08056, 2.26947)
+texture = ExtResource("1_kq7nx")
+
+[node name="Button" type="TextureButton" parent="."]
+offset_left = 1701.0
+offset_top = 1436.0
+offset_right = 2375.0
+offset_bottom = 1599.0
+theme = SubResource("Theme_v5fjx")

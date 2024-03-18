@@ -14,3 +14,4 @@ func _on_area_2d_body_entered(body):
 	if blue_chicken_in_farm and pink_chicken_in_farm :
 		print ("you win")
 		get_tree().change_scene_to_file("res://victory_screen.tscn")
+

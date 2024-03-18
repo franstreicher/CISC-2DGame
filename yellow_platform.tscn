@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://dnj2kyxgqkwws"]
+[gd_scene load_steps=4 format=3 uid="uid://dnj2kyxgqkwws"]
+
+[ext_resource type="Script" path="res://yellow_platform.gd" id="1_a8boi"]
+[ext_resource type="Texture2D" uid="uid://dfux0mtcm137p" path="res://yellow.png" id="1_bgmgu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nac"]
+size = Vector2(424.696, 50)
 
 [node name="yellow_platform" type="Node2D"]
+script = ExtResource("1_a8boi")
+
+[node name="yellow platform" type="Sprite2D" parent="."]
+position = Vector2(967.5, 347)
+scale = Vector2(1.42117, 0.652174)
+texture = ExtResource("1_bgmgu")
+
+[node name="Area2D" type="Area2D" parent="yellow platform"]
+position = Vector2(372, 258)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellow platform/Area2D"]
+position = Vector2(-373, -281)
+shape = SubResource("RectangleShape2D_80nac")
+
+[connection signal="body_entered" from="yellow platform/Area2D" to="." method="_on_area_2d_body_entered"]

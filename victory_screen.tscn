@@ -13,8 +13,8 @@ font_weight = 999
 script = ExtResource("1_f8450")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 2934.0
+offset_bottom = 1833.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_arfuk")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]

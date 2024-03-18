@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://egtwenyhiv1d"]
+
+[node name="blue_platform" type="Node2D"]
+
+[node name="blue platform" type="Node2D" parent="."]

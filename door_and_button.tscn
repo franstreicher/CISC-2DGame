@@ -261,3 +261,5 @@ shape = SubResource("RectangleShape2D_0o4jm")
 libraries = {
 "": SubResource("AnimationLibrary_wjhne")
 }
+
+[connection signal="body_entered" from="Button/Area2D" to="." method="_on_area_2d_body_entered"]

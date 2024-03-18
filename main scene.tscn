@@ -770,14 +770,15 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -164.0
-offset_top = -447.0
-offset_right = 3041.0
-offset_bottom = 1714.0
+offset_left = -165.0
+offset_top = -452.0
+offset_right = 3040.0
+offset_bottom = 1709.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_pg7k5")
 stretch_mode = 5
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -816,60 +817,20 @@ position = Vector2(653, 288)
 [node name="moving platform4" parent="." instance=ExtResource("6_23hu1")]
 position = Vector2(1700, 258)
 
-[node name="pink surface" type="Node2D" parent="."]
-position = Vector2(1700, 258)
+[node name="pink surface" parent="." instance=ExtResource("8_js6r7")]
+position = Vector2(3008, 3538)
+metadata/_edit_lock_ = true
 
-[node name="pink 1" parent="pink surface" instance=ExtResource("8_js6r7")]
-position = Vector2(-3466, 25312)
-scale = Vector2(0.78889, 0.996535)
+[node name="pink surface2" parent="." instance=ExtResource("8_js6r7")]
+position = Vector2(3440, 3344)
+metadata/_edit_lock_ = true
 
-[node name="Area2D" parent="pink surface/pink 1" index="0"]
-position = Vector2(3152.36, -23948.9)
-scale = Vector2(-1.13444, 0.304171)
+[node name="pink surface3" parent="." instance=ExtResource("8_js6r7")]
+position = Vector2(3871, 3538)
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" parent="pink surface/pink 1" index="1"]
-position = Vector2(3151.9, -23949.5)
-
-[node name="pink 2" parent="pink surface" instance=ExtResource("8_js6r7")]
-position = Vector2(-3033, 25122)
-scale = Vector2(0.78889, 0.996535)
-
-[node name="Area2D" parent="pink surface/pink 2" index="0"]
-position = Vector2(3152.36, -23948.9)
-scale = Vector2(-1.13444, 0.304171)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" parent="pink surface/pink 2" index="1"]
-position = Vector2(3151.9, -23949.5)
-metadata/_edit_group_ = true
-
-[node name="pink 3" parent="pink surface" instance=ExtResource("8_js6r7")]
-position = Vector2(-2600, 25308)
-scale = Vector2(0.78889, 0.996535)
-
-[node name="Area2D" parent="pink surface/pink 3" index="0"]
-position = Vector2(3152.36, -23948.9)
-scale = Vector2(-1.13444, 0.304171)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" parent="pink surface/pink 3" index="1"]
-position = Vector2(3151.9, -23949.5)
-metadata/_edit_group_ = true
-
-[node name="pink 4" parent="pink surface" instance=ExtResource("8_js6r7")]
-position = Vector2(-2161, 25118)
-scale = Vector2(0.78889, 0.996535)
-
-[node name="Area2D" parent="pink surface/pink 4" index="0"]
-position = Vector2(3152.36, -23948.9)
-scale = Vector2(-1.13444, 0.304171)
-
-[node name="CollisionShape2D" parent="pink surface/pink 4" index="1"]
-position = Vector2(3151.9, -23949.5)
+[node name="pink surface4" parent="." instance=ExtResource("8_js6r7")]
+position = Vector2(4305, 3345)
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="farm building/Area2D" to="farm building" method="_on_area_2d_body_entered"]
-
-[editable path="pink surface/pink 1"]
-[editable path="pink surface/pink 2"]
-[editable path="pink surface/pink 3"]
-[editable path="pink surface/pink 4"]

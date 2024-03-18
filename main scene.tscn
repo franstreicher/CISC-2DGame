@@ -805,10 +805,10 @@ shape = SubResource("RectangleShape2D_uyo1k")
 metadata/_edit_lock_ = true
 
 [node name="pinkchicken" parent="." instance=ExtResource("4_bh2v0")]
-position = Vector2(507, -1427)
+position = Vector2(-79, 41)
 
 [node name="bluechicken" parent="." instance=ExtResource("5_72ip0")]
-position = Vector2(615, 190)
+position = Vector2(142, 1589)
 
 [node name="moving platform" parent="." instance=ExtResource("6_23hu1")]
 position = Vector2(609, 595)

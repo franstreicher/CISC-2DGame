@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://difje1mswajiw"
-path="res://.godot/imported/@Button Rect.png-1b7735f3d7e36fdea28f4885cabfa145.ctex"
+uid="uid://s43mcvpa6kbf"
+path="res://.godot/imported/coop crusade.png-870877eb65c8dfc770dca9c341f04864.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://@Button Rect.png"
-dest_files=["res://.godot/imported/@Button Rect.png-1b7735f3d7e36fdea28f4885cabfa145.ctex"]
+source_file="res://coop crusade.png"
+dest_files=["res://.godot/imported/coop crusade.png-870877eb65c8dfc770dca9c341f04864.ctex"]
 
 [params]
 

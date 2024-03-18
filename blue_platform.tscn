@@ -1,5 +1,25 @@
-[gd_scene format=3 uid="uid://egtwenyhiv1d"]
+[gd_scene load_steps=4 format=3 uid="uid://egtwenyhiv1d"]
 
-[node name="blue_platform" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://c1uiv5qih6rnq" path="res://blue.png" id="1_ljxbs"]
+[ext_resource type="Script" path="res://blue_platform.gd" id="1_ssmcb"]
 
-[node name="blue platform" type="Node2D" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i13ly"]
+size = Vector2(1074.26, 250)
+
+[node name="blue_surface" type="Node2D"]
+script = ExtResource("1_ssmcb")
+
+[node name="blue surface" type="Sprite2D" parent="."]
+position = Vector2(704, 576.5)
+scale = Vector2(0.27256, 0.164596)
+texture = ExtResource("1_ljxbs")
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="blue surface"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blue surface/Area2D"]
+position = Vector2(3.92474, -49.1944)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_i13ly")
+
+[connection signal="body_entered" from="blue surface/Area2D" to="." method="_on_area_2d_body_entered"]

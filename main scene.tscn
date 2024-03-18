@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnbbqga226g37"]
+[gd_scene load_steps=12 format=3 uid="uid://bnbbqga226g37"]
 
 [ext_resource type="Texture2D" uid="uid://ohpk423fq4no" path="res://Background.png" id="1_pg7k5"]
 [ext_resource type="Texture2D" uid="uid://cyysb448n6l0j" path="res://Terrain (16x16).png" id="2_p22tr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://pwgf45wodgwr" path="res://pink chicken.tscn" id="4_bh2v0"]
 [ext_resource type="PackedScene" uid="uid://ddm2bn0d11c20" path="res://blue chicken.tscn" id="5_72ip0"]
 [ext_resource type="PackedScene" uid="uid://cn5hkd2war1vv" path="res://moving_platform.tscn" id="6_23hu1"]
+[ext_resource type="PackedScene" uid="uid://egtwenyhiv1d" path="res://blue_platform.tscn" id="8_420ju"]
 [ext_resource type="PackedScene" uid="uid://qidbubq01ww" path="res://pink_surface.tscn" id="8_js6r7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58aic"]
@@ -798,6 +799,7 @@ texture = ExtResource("3_o4vxw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="farm building/Area2D"]
 position = Vector2(-4.63407, 2.30946)
 shape = SubResource("RectangleShape2D_uyo1k")
+metadata/_edit_lock_ = true
 
 [node name="pinkchicken" parent="." instance=ExtResource("4_bh2v0")]
 position = Vector2(103, 40)
@@ -831,6 +833,22 @@ metadata/_edit_lock_ = true
 
 [node name="pink surface4" parent="." instance=ExtResource("8_js6r7")]
 position = Vector2(4305, 3345)
+metadata/_edit_lock_ = true
+
+[node name="blue_surface" parent="." instance=ExtResource("8_420ju")]
+position = Vector2(14, 938)
+metadata/_edit_lock_ = true
+
+[node name="blue_surface2" parent="." instance=ExtResource("8_420ju")]
+position = Vector2(450, 1130)
+metadata/_edit_lock_ = true
+
+[node name="blue_surface3" parent="." instance=ExtResource("8_420ju")]
+position = Vector2(879, 937)
+metadata/_edit_lock_ = true
+
+[node name="blue_surface4" parent="." instance=ExtResource("8_420ju")]
+position = Vector2(1310, 1129)
 metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="farm building/Area2D" to="farm building" method="_on_area_2d_body_entered"]

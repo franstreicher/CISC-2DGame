@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhcqclq1djy3n"]
 
-[ext_resource type="Texture2D" uid="uid://cteacgjxardoc" path="res://Intro Page 1.jpg" id="1_kq7nx"]
+[ext_resource type="Texture2D" uid="uid://dc2rlwmou1lku" path="res://Intro Page 1.jpg" id="1_kq7nx"]
 [ext_resource type="Script" path="res://intro_scene.gd" id="1_n4xr3"]
 [ext_resource type="Texture2D" uid="uid://b3po5h3nsv1oy" path="res://PlayButton_2.png" id="3_cqqgt"]
 [ext_resource type="Texture2D" uid="uid://s43mcvpa6kbf" path="res://coop crusade.png" id="4_o2tue"]

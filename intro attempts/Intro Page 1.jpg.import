@@ -2,8 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://2ew6wjjknwxr"
 path="res://.godot/imported/Intro Page 1.jpg-dffcd9a642992cf8c244b974e5e07705.ctex"
+=======
+<<<<<<<< Updated upstream:Intro Page 1.jpg.import
+uid="uid://dc2rlwmou1lku"
+path="res://.godot/imported/Intro Page 1.jpg-ffffa1f4001ceeb66ee19d708aa6d812.ctex"
+========
+uid="uid://cteacgjxardoc"
+path="res://.godot/imported/Intro Page 1.jpg-dffcd9a642992cf8c244b974e5e07705.ctex"
+>>>>>>>> Stashed changes:intro attempts/Intro Page 1.jpg.import
+>>>>>>> Stashed changes
 metadata={
 "vram_texture": false
 }

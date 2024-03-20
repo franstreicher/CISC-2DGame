@@ -72,15 +72,16 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpnwq"]
-size = Vector2(76.5, 76.0625)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tru8l"]
+radius = 32.25
+height = 68.5
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_6hopi")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(154.369, 1580.07)
+position = Vector2(153, 1576)
 scale = Vector2(2.85193, 2.80799)
 sprite_frames = SubResource("SpriteFrames_25ppt")
 animation = &"idle"
@@ -89,5 +90,5 @@ frame_progress = 0.914353
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(153.75, 1580.03)
-shape = SubResource("RectangleShape2D_gpnwq")
+position = Vector2(152, 1579)
+shape = SubResource("CapsuleShape2D_tru8l")

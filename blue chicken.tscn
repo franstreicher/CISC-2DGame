@@ -72,8 +72,9 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0n3lo"]
-size = Vector2(89.875, 86.5625)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_alpay"]
+radius = 39.0
+height = 80.0
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 position = Vector2(489, 1551)
@@ -81,7 +82,7 @@ script = ExtResource("1_f3ky3")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(35, 35.5)
+position = Vector2(42, 39)
 scale = Vector2(3.1875, 3.03125)
 sprite_frames = SubResource("SpriteFrames_fqp1d")
 animation = &"idle"
@@ -90,5 +91,5 @@ frame_progress = 0.140627
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(38.0625, 33.7188)
-shape = SubResource("RectangleShape2D_0n3lo")
+position = Vector2(40, 40)
+shape = SubResource("CapsuleShape2D_alpay")

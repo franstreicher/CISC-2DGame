@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhcqclq1djy3n"]
+[gd_scene load_steps=5 format=3 uid="uid://dhcqclq1djy3n"]
 
-[ext_resource type="Script" path="res://intro_scene.gd" id="1_n4xr3"]
 [ext_resource type="Texture2D" uid="uid://ckjgf0w1tilxx" path="res://intro attempts/Intro Page 1.jpg" id="2_2mw0s"]
 [ext_resource type="Texture2D" uid="uid://b3po5h3nsv1oy" path="res://PlayButton_2.png" id="3_cqqgt"]
 [ext_resource type="Texture2D" uid="uid://s43mcvpa6kbf" path="res://coop crusade.png" id="4_o2tue"]
@@ -8,7 +7,6 @@
 [sub_resource type="Theme" id="Theme_v5fjx"]
 
 [node name="intro scene" type="Node2D"]
-script = ExtResource("1_n4xr3")
 
 [node name="IntroPage1" type="Sprite2D" parent="."]
 texture_filter = 1

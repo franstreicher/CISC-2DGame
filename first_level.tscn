@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://xb7o226gyuxh"]
+
+[ext_resource type="Texture2D" uid="uid://bjvpw8vlml2em" path="res://morning-in-winter-mountains-flat-color-illustration-scenic-frozen-land-during-daytime-snow-on-wintry-hills-panoramic-2d-cartoon-landscape-with-ridges-and-peaks-on-background-vector.jpg" id="1_pbbqm"]
+
+[node name="first_level" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 2902.0
+offset_bottom = 1955.0
+texture = ExtResource("1_pbbqm")
+metadata/_edit_lock_ = true
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2

@@ -768,7 +768,6 @@ physics_layer_1/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_58aic")
 
 [node name="main scene" type="Node2D"]
-metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

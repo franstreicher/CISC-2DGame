@@ -767,7 +767,6 @@ sources/0 = SubResource("TileSetAtlasSource_58aic")
 size = Vector2(168.838, 128.095)
 
 [node name="main scene" type="Node2D"]
-metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
